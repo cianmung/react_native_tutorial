@@ -3,6 +3,7 @@ import { Link } from "expo-router";
 import { View, Text, ScrollView, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../constants";
+import CustomButton from "@/components/CustomButton";
 
 export default function RootLayout() {
   return (
@@ -31,9 +32,19 @@ export default function RootLayout() {
               className="w-[136px] h-[15px] absolute-bottom-2 -right-0"
               resizeMode="contain"
             />
+            <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
+              Where creativitiy meets innovation: embark on a journey of
+              limitless exploration with Aora
+            </Text>
+            <CustomButton
+              title="Continue with Email"
+              handlePress={() => {}}
+              containerStyles="mt-7"
+            />
           </View>
         </View>
       </ScrollView>
+      <StatusBar backgroundColor="#161622" style="light" />
     </SafeAreaView>
   );
 }
